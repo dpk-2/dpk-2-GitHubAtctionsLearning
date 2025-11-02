@@ -17,7 +17,14 @@ jobs:
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+<<<<<<< HEAD
         aws-region: ap-south-1
 
     - name: Deploy static site to S3 bucket
       run: aws s3 sync . s3://dpk-github-action-demo --delete
+=======
+        aws-region: us-east-1
+
+    - name: Deploy static site to S3 bucket
+      run: aws s3 sync ./public/ s3:/tws-github-actions-demo --delete
+>>>>>>> d572b47 (Create main.yml)
